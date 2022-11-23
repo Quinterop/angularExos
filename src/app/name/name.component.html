@@ -1,0 +1,21 @@
+<div class="textinput">
+    <input type="text" [(ngModel)]="name">
+    <select [(ngModel)]="font" >
+        <option *ngFor="let font of fonts" ngDefaultControl >{{font}}</option>
+    </select>
+    <input type="number" [(ngModel)]="fontsize" ngDefaultControl>
+    
+    <div class="radio">
+        <!-- toggled radio button -->
+        <input type="radio" [(ngModel)]="alignment" value="left" ngDefaultControl checked>Left 
+        <input type="radio" [(ngModel)]="alignment" value="center" ngDefaultControl>Center
+        <input type="radio" [(ngModel)]="alignment" value="right" ngDefaultControl>Right
+        <!-- label  todo-->
+    </div>
+</div>
+
+<div class="textoutput" *ngIf="name" [ngClass]="[font,alignment]" [ngStyle]="{'font-size':+ fontsize + 'px'}">
+    <h1>Hello {{name | uppercase}}!</h1>                          
+    
+</div>
+

@@ -1,0 +1,25 @@
+/*put body in a single line*/
+
+input{
+    height: 28px;
+    padding: 0%;
+    margin: 0%;
+    border: solid 1px;
+}
+select{
+    height: 30px;
+}
+.ops{
+    display: inline-flex;
+    padding: 0%;
+    margin: 0%;
+    border: 0ch;
+}
+
+h1{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+

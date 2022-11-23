@@ -1,0 +1,25 @@
+
+.textoutput{
+    font-family: Arial;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.center{
+    text-align: center;
+}
+.Arial{
+    font-family: Arial;
+}
+.Times{
+    font-family: 'Times New Roman', Times, serif;
+}
+.Verdana{
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+
+

@@ -1,0 +1,14 @@
+<!-- dropdown list -->
+<div class="ops">
+    <div class="operation">
+        <input type="number" [(ngModel)]="num1" (ngModelChange)="calculate()" ngDefaultControl class="param">
+        <select [(ngModel)]="op" (ngModelChange)="calculate()" class="param">
+            <option *ngFor="let ope of ops" ngDefaultControl class="param">{{ope}}</option>
+        </select>
+        <input type="number" [(ngModel)]="num2" (ngModelChange)="calculate()" ngDefaultControl class="param">
+    </div>
+    <div *ngIf="result" class="result">
+        <h1> = {{result}}</h1>
+    </div>
+    
+</div>
