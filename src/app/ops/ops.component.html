@@ -1,14 +1,19 @@
 <!-- dropdown list -->
 <div class="ops">
     <div class="operation">
-        <input type="number" [(ngModel)]="num1" (ngModelChange)="calculate()" ngDefaultControl class="param">
-        <select [(ngModel)]="op" (ngModelChange)="calculate()" class="param">
+        <input type="number" [(ngModel)]="num1"  ngDefaultControl class="param">
+        <select [(ngModel)]="op"  class="param">
             <option *ngFor="let ope of ops" ngDefaultControl class="param">{{ope}}</option>
         </select>
-        <input type="number" [(ngModel)]="num2" (ngModelChange)="calculate()" ngDefaultControl class="param">
+        <input type="number" [(ngModel)]="num2"  ngDefaultControl class="param">
+        <button (click)="calculate()" class="param">=</button>
     </div>
     <div *ngIf="result" class="result">
-        <h1> = {{result}}</h1>
+        <h1> {{result}}</h1>
     </div>
+    <div  class="history">
+        <ul>
+            <li *ngFor="let h of results">{{h}}<button (click)="deleteval(h)">delete</button></li>
+        </ul>
     
 </div>
