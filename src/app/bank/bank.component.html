@@ -1,1 +1,33 @@
-<p>bank works!</p>
+<app-bank-header></app-bank-header>
+<div class="sort">
+    <label>Sort by:</label>
+    <select> 
+        <option value="id">id</option>
+        <option value="date">date</option>
+        <option value="amount">amount</option>
+        <option value="balance">balance</option>
+        <option value="label">label</option>
+    </select>
+    <!-- submit -->
+    <button type="submit">Submit</button>
+</div>
+
+<div class="transactions">
+    <table>
+        <tr>
+            <th>id</th>
+            <th>date</th>
+            <th>amount</th>
+            <th>balance</th>
+            <th>label</th>
+        </tr>
+        <tr *ngFor="let transaction of transactions">
+            <td>{{transaction.id}}</td>
+            <td>{{transaction.date}}</td>
+            <td>{{transaction.amount}}</td>
+            <td>{{transaction.balance}}</td>
+            <td>{{transaction.label}}</td>
+            <td><button type="button">details</button></td>
+        </tr>
+    </table>
+    
