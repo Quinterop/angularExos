@@ -1,3 +1,11 @@
+# note
+il est demandé dans le sujet de faire des pages avec ngRoute. je n'ai pas trouvé cette fonction dans la version d'Angular que j'ai utilisé (15) et il me semble qu'elle n'est que dans AngularJS (aka angular 1.x)
+
+
+
+
+
+
 # Template
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
