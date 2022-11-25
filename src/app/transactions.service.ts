@@ -11,6 +11,7 @@ export class TransactionsService {
   constructor(private http: HttpClient) { }
   
   private transactionsUrl = "api/transacs";
+  private transaction?: Transaction;
   
   getTransactions(): Observable<Transaction[]> {
     console.log("getTransactions");
@@ -20,11 +21,19 @@ export class TransactionsService {
     .pipe(catchError(this.handleError<Transaction[]>('getTransactions', [])));
   }
 
-  getTransaction(id: string): Observable<Transaction> {
-    const url = `${this.transactionsUrl}/${id}`;
-    return this.http.get<Transaction>(url);
-    //.pipe(catchError(this.handleError<Transaction>(`getTransaction id=${id}`)));
+  setTransaction(transaction: Transaction): void {
+    console.log("setTransaction");
+    console.log(transaction);
+    this.transaction = transaction;
   }
+
+  getTransaction(): Transaction | undefined {
+    console.log("getTransaction");
+    console.log(this.transaction);
+    return this.transaction;
+  }
+    
+  
 
   private handleError<T>(operation = 'operation', result?: T) {
     console.log("Error");

@@ -1,15 +1,13 @@
 <app-bank-header></app-bank-header>
 <div class="sort">
     <label>Sort by:</label>
-    <select> 
+    <select #sorttype (change)="sortTransactions(sorttype.value)"> 
         <option value="id">id</option>
         <option value="date">date</option>
         <option value="amount">amount</option>
         <option value="balance">balance</option>
         <option value="label">label</option>
     </select>
-    <!-- submit -->
-    <button type="submit">Submit</button>
 </div>
 
 <div class="transactions">
@@ -27,7 +25,9 @@
             <td>{{transaction.amount}}</td>
             <td>{{transaction.balance}}</td>
             <td>{{transaction.label}}</td>
-            <td><button type="button">details</button></td>
+            <td><button type="button" routerLink="/bank/transaction" routerLinkActive="active" (click)="passData(transaction)">details</button></td>
         </tr>
     </table>
+</div>
+<router-outlet></router-outlet>
     

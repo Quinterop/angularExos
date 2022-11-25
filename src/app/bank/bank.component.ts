@@ -1,6 +1,7 @@
 import { TransactionsService } from './../transactions.service';
 import { Component } from '@angular/core';
 import { Transaction } from '../Transaction';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-bank',
@@ -44,6 +45,10 @@ export class BankComponent {
       this.transactions.sort((a,b) => (a.label > b.label) ? 1 : ((b.label > a.label) ? -1 : 0));
       break;
     }
+  }
+
+  passData(transaction: Transaction): void {
+    this.transactionsService.setTransaction(transaction);
   }
   
   

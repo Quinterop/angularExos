@@ -1,1 +1,6 @@
-<p>bank-details works!</p>
+<app-bank-header></app-bank-header>
+<h1>transaction details</h1>
+<ul *ngFor="let detail of transaction | keyvalue">
+    <li>{{detail.key}}: {{detail.value}}</li>
+</ul>
+
